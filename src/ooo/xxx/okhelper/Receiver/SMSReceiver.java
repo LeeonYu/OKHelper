@@ -24,6 +24,10 @@ public class SMSReceiver extends BroadcastReceiver {
 		}
 	}
 
+	/**
+	 * 处理短信数据
+	 * @param intent
+	 */
 	@SuppressLint("SimpleDateFormat")
 	private void DealWithData(Intent intent) {
 		StringBuffer SMSAddress = new StringBuffer();

@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DBhelper extends SQLiteOpenHelper{
+public class DBhelper extends SQLiteOpenHelper {
 	private String DBname = "okhelper.db";
 
 	public DBhelper(Context context, String name, CursorFactory factory, int version) {
@@ -16,13 +16,13 @@ public class DBhelper extends SQLiteOpenHelper{
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

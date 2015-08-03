@@ -9,12 +9,18 @@ import android.util.Log;
 import ooo.xxx.okhelper.contentobserver.PhoneObserver;
 import ooo.xxx.okhelper.contentobserver.SMSObserver;
 
+/**
+ * 后台服务，用于监听
+ * 
+ * @author Leon
+ *
+ */
 public class MyService extends Service {
 
 	String Tag = "okServer";
 
 	SMSObserver smsobserver = new SMSObserver(new Handler(), this);
-	PhoneObserver phoneoberver = new PhoneObserver(new Handler(),this);
+	PhoneObserver phoneoberver = new PhoneObserver(new Handler(), this);
 
 	@Override
 	public IBinder onBind(Intent arg0) {

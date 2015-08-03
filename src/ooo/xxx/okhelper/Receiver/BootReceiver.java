@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.util.Log;
 import ooo.xxx.okhelper.services.MyService;
 
+/**
+ * ¿ª»ú×ÔÆô
+ * 
+ * @author Leon
+ *
+ */
 public class BootReceiver extends BroadcastReceiver {
 
 	private static final String action_boot = "android.intent.action.BOOT_COMPLETED";

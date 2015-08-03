@@ -34,7 +34,7 @@ public class PhoneObserver extends ContentObserver {
 				case Calls.MISSED_TYPE:
 					Log.i(Tag, "未接来电");
 					if (cursor.getInt(cursor.getColumnIndex(Calls.NEW)) == 1) {
-						
+
 					}
 					break;
 				case Calls.INCOMING_TYPE:
@@ -44,8 +44,9 @@ public class PhoneObserver extends ContentObserver {
 					Log.v(Tag, "已拨电话");
 					break;
 				}
+				int phoneNumber = cursor.getColumnIndex(Calls.NUMBER);
+				Log.i(Tag, "号码：" + phoneNumber);
 			}
-			// release resource
 			cursor.close();
 		}
 	}

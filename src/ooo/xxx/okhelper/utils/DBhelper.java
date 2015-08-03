@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBhelper extends SQLiteOpenHelper{
+	private String DBname = "okhelper.db";
 
 	public DBhelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);

@@ -13,8 +13,8 @@ public class MyService extends Service {
 
 	String Tag = "okServer";
 
-	SMSObserver smsobserver = new SMSObserver(new Handler());
-	PhoneObserver phoneoberver = new PhoneObserver(new Handler());
+	SMSObserver smsobserver = new SMSObserver(new Handler(), this);
+	PhoneObserver phoneoberver = new PhoneObserver(new Handler(),this);
 
 	@Override
 	public IBinder onBind(Intent arg0) {
@@ -22,6 +22,7 @@ public class MyService extends Service {
 		return null;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onStart(Intent intent, int startId) {
 		// TODO Auto-generated method stub

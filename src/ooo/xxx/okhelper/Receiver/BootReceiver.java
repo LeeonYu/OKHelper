@@ -5,9 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import ooo.xxx.okhelper.services.MyService;
+import ooo.xxx.okhelper.services.PhoneService;
 
 /**
- * ¿ª»ú×ÔÆô
+ * 
  * 
  * @author Leon
  *
@@ -26,6 +27,8 @@ public class BootReceiver extends BroadcastReceiver {
 			bootStartIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			Intent ser = new Intent(arg0, MyService.class);
 			arg0.startService(ser);
+			Intent ser2 = new Intent(arg0, PhoneService.class);
+			arg0.startService(ser2);
 			arg0.startService(bootStartIntent);
 			Log.i(Tag, "server booting...");
 		}
